@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Course Home Page for WDD231">
+    <meta name="author" content="Elías Cabeza de Vaca">
+    <title>WDD231 - Home</title>
+    <!--links-->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/course.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+</head>
+<body>
+    <header>
+        <img src="images/personal-logo.png" alt="WDD231 Logo" id="SiteLogo">
+        <span>Elías Cabeza de Vaca</span>
+        <button id="menu">&#9776;</button>
+    </header>
+
+    <nav>
+        <ul id="navMenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Chamber Project</a></li>
+            <li><a href="#">Final Project</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="banner">
+            <h1>Home</h1>
+            <h2>About Me</h2>
+            <p>Hi! My name is Elías, and I’m currently a student in Software Development at BYU-Pathway. 
+                I love learning new things and challenging myself, especially when it comes to web development 
+                and programming. I have experience with HTML and CSS, and I’m getting better at JavaScript using 
+                AI tools to help me code faster and smarter. I enjoy building small projects and experimenting 
+                with creative ideas, like websites, templates, and interactive scripts. Besides coding, I’m also 
+                passionate about personal growth, discipline, and learning new skills. I like organizing my projects, 
+                solving problems, and finding ways to improve every day. I’m excited about the opportunities ahead 
+                and always looking for ways to grow as a developer and as a person.</p>
+        </section>
+        <section class="student-photo">
+            <h2>Student Photo</h2>
+            <img src="images/student-photo.jpeg" alt="student photo">
+        </section>
+        <section class="certificates">
+            <h2>Web Certificate Courses</h2>
+            <div id="filters">
+                <button>All</button>
+                <button>CSE</button>
+                <button>WDD</button>
+            </div>
+            <div id="courses">
+                <div>WDD 130</div>
+                <div>WDD 131</div>
+                <div>WDD 231</div>
+            </div>
+            <p>The total credits for course listed above is 6</p>
+        </section>
+    </main>
+    
+    <footer>
+        <p>
+            &copy; <span id="year"></span> Elías Cabeza de Vaca | Ecuador
+        </p>
+        <p id="lastModified"></p>
+        <p>
+           <a href="https://github.com/Elias-cdv" target="_blank">Github</a> 
+           <a href="https://www.linkedin.com/in/el%C3%ADas-cabeza-de-vaca-0062832b6/" target="_blank">LinkedIn</a>
+        </p>
+    </footer>
+</body>
+</html>

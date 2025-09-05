@@ -1,0 +1,180 @@
+/* --- large.css --- */
+@media (min-width: 768px) {
+
+  /* Header */
+  #menu {
+    display: none;
+  }
+
+  #navMenu {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: left;
+    gap: 30px;
+    background-color: var(--color-header-footer);
+    border-radius: 8px;
+  }
+
+  nav {
+    background: var(--color-header-footer);
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    gap: 16px; /* Espacio entre logo y texto */
+    padding: 15px 20px;
+    background-color: var(--color-header-footer);
+    color: var(--color-text);
+  }
+
+  /* Main grid */
+  main {
+    max-width: 1200px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Banner más ancho, foto menos ancha */
+    grid-template-rows: auto auto;
+    gap: 30px;
+    background: var(--color-bg);
+    color: var(--color-text);
+    border-radius: 12px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.12);
+  }
+
+  .banner {
+    grid-column: 1 / 2; /* Primera columna */
+    grid-row: 1 / 2;
+    background: var(--color-secondary);
+    color: var(--color-text);
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 250px;
+  }
+  .banner h1 {
+    margin-top: 0;
+    justify-content: right;
+  }
+  .banner h2{
+    margin-top: 0;
+    justify-content: center;
+  }
+
+  .student-photo {
+    grid-column: 2 / 3; /* Segunda columna */
+    grid-row: 1 / 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--color-secondary);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    min-height: 250px;
+  }
+
+  /* Controla el ancho de la imagen y la info */
+  .student-photo img {
+    max-width: 180px;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+    border: 2px solid var(--color-accent);
+    margin-top: 12px;
+  }
+
+  .student-photo h2 {
+    margin: 0;
+    color: var(--color-accent);
+    font-size: 1.2em;
+    font-weight: 700;
+  }
+
+  .certificates {
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+    background: var(--color-secondary);
+    color: var(--color-text);
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #filters {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+
+  #courses {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+
+  #courses div {
+    background: var(--color-header-footer);
+    color: var(--color-text);
+    padding: 8px 16px;
+    border-radius: 5px;
+    min-width: 100px;
+    text-align: center;
+    font-weight: 600;
+  }
+
+  .social {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 12px;
+  }
+
+  .social a img {
+    width: 32px;
+    height: 32px;
+    filter: grayscale(0);
+    transition: filter 0.3s;
+  }
+
+  .social a img:hover {
+    filter: grayscale(1) brightness(1.5);
+  }
+
+  /* Nav hover efecto underline animado */
+  nav a {
+    position: relative;
+    color: var(--color-text);
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background 0.3s, color 0.3s;
+  }
+
+  nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: var(--color-accent);
+    transition: width 0.3s ease;
+  }
+
+  nav a:hover {
+    background: var(--color-accent);
+    color: var(--color-header-footer);
+  }
+
+  nav a:hover::after {
+    width: 100%;
+  }
+}
