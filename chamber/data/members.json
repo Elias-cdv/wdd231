@@ -1,0 +1,65 @@
+[
+  {
+    "name": "TechNova Solutions",
+    "address": "123 Innovation Dr, Silicon Valley, CA",
+    "phone": "(123) 456-7890",
+    "website": "https://www.technova.com",
+    "image": "logo1.png",
+    "membership": 3,
+    "info": "Leading provider of AI solutions."
+  },
+  {
+    "name": "GreenLeaf Energy",
+    "address": "45 Eco St, Portland, OR",
+    "phone": "(234) 567-8901",
+    "website": "https://www.greenleafenergy.com",
+    "image": "logo2.png",
+    "membership": 2,
+    "info": "Sustainable energy company."
+  },
+  {
+    "name": "Skyline Architecture",
+    "address": "78 Urban Ave, New York, NY",
+    "phone": "(345) 678-9012",
+    "website": "https://www.skylinearch.com",
+    "image": "logo3.png",
+    "membership": 1,
+    "info": "Modern and eco-friendly buildings."
+  },
+  {
+    "name": "Oceanic Foods",
+    "address": "12 Harbor Rd, Miami, FL",
+    "phone": "(456) 789-0123",
+    "website": "https://www.oceanicfoods.com",
+    "image": "oceanicfood.png",
+    "membership": 3,
+    "info": "Seafood suppliers worldwide."
+  },
+  {
+    "name": "NextGen Robotics",
+    "address": "88 Tech Park, Boston, MA",
+    "phone": "(567) 890-1234",
+    "website": "https://www.nextgenrobotics.com",
+    "image": "nextgen.png",
+    "membership": 2,
+    "info": "Industrial automation and robotics."
+  },
+  {
+    "name": "BrightFuture Education",
+    "address": "23 Knowledge Ln, Austin, TX",
+    "phone": "(678) 901-2345",
+    "website": "https://www.brightfutureedu.com",
+    "image": "brightfuture.png",
+    "membership": 1,
+    "info": "Innovative learning platforms."
+  },
+  {
+    "name": "Aurora Health",
+    "address": "56 Wellness Blvd, Denver, CO",
+    "phone": "(789) 012-3456",
+    "website": "https://www.aurorahealth.com",
+    "image": "aurora.png",
+    "membership": 3,
+    "info": "Premium healthcare services."
+  }
+]

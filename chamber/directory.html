@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guayaquil Chamber of Commerce - Directory</title>
+  <meta name="description" content="Directory of members of the Guayaquil Chamber of Commerce. Find companies, contacts, and more.">
+  <meta name="author" content="Elías Cabeza de Vaca">
+  <link rel="icon" href="images/favicon.png">
+  <!-- Facebook Meta -->
+  <meta property="og:title" content="Guayaquil Chamber of Commerce">
+  <meta property="og:description" content="Directory of members of the Guayaquil Chamber of Commerce.">
+  <meta property="og:image" content="images/og-image.jpg">
+  <meta property="og:url" content="https://your-github-username.github.io/wdd231/chamber/directory.html">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <img src="images/favicon.png" alt="Guayaquil Chamber of Commerce Logo" class="logo">
+      <h1>Guayaquil Chamber of Commerce</h1>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="directory.html" class="active">Directory</a></li>
+          <li><a href="join.html">Join</a></li>
+          <li><a href="discover.html">Discover</a></li>
+        </ul>
+        <button id="menu-toggle" aria-label="Open menu">&#9776;</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="directory-header">
+      <h2>Member Directory</h2>
+      <div class="view-toggle">
+        <button id="grid-view" class="active" aria-label="Grid view">Grid</button>
+        <button id="list-view" aria-label="List view">List</button>
+      </div>
+    </section>
+    <section id="members-container" class="grid-view sections-row">
+      <!-- Member cards will be inserted here by JS -->
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-contact">
+        <strong>Guayaquil Chamber of Commerce</strong><br>
+        Av. Francisco de Orellana 1234<br>
+        Guayaquil, Ecuador<br>
+        info@ccguayaquil.org<br>
+        (+593) 4 123 4567
+      </div>
+      <div class="footer-social">
+        <a href="#" aria-label="YouTube"><img src="images/youtube-logo-0-1536x1536.png" alt="YouTube"></a>
+        <a href="#" aria-label="Twitter"><img src="images/twitter-logo-1.png" alt="Twitter"></a>
+        <a href="#" aria-label="LinkedIn"><img src="images/linkedIn-logo-0.png" alt="LinkedIn"></a>
+      </div>
+      <div class="footer-info">
+        <p>WDD231 Class Project<br>
+        Elías Cabeza de Vaca<br>
+        &copy; <span id="footer-year"></span> Guayaquil Chamber of Commerce<br>
+        Last modification: <span id="last-modified"></span></p>
+      </div>
+    </div>
+  </footer>
+  <script src="ja/members.js"></script>
+</body>
+</html>
