@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guayaquil Chamber of Commerce</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="images/favicon.png">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Facebook Meta -->
+  <meta property="og:title" content="Guayaquil Chamber of Commerce">
+  <meta property="og:description" content="Directory of members of the Guayaquil Chamber of Commerce.">
+  <meta property="og:image" content="images/og-image.jpg">
+  <meta property="og:url" content="https://your-github-username.github.io/wdd231/chamber/directory.html">
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <img src="images/favicon.png" alt="Guayaquil Chamber of Commerce Logo" class="logo">
+      <h1>Guayaquil Chamber of Commerce</h1>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="directory.html">Directory</a></li>
+          <li><a href="join.html">Join</a></li>
+          <li><a href="discover.html">Discover</a></li>
+        </ul>
+        <button id="menu-toggle" aria-label="Open menu">&#9776;</button>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <img src="images/ecuador_guayaquil_banner_principal.webp" alt="Guayaquil panoramic view" class="hero-image">
+    <button class="keynote-btn">Keynote Tickets</button>
+  </section>
+
+  <main>
+    <h1 class="home-title">Home</h1>
+    <div class="sections-row">
+      <div class="section-card">
+        <div class="section-title">Events</div>
+        <div class="section-content">
+          <p>Upcoming business networking events:</p>
+          <ul>
+            <li>Business Mixer - Oct 30, 2023</li>
+            <li>Entrepreneur Workshop - Nov 5, 2023</li>
+            <li>Annual Gala - Dec 15, 2023</li>
+          </ul>
+        </div>
+      </div>
+      <div class="section-card">
+        <div class="section-title">Current Weather</div>
+        <div class="section-content">
+          <div id="current-weather">
+            <div id="weather-icon"></div>
+            <p>Temperature: <span id="temp-actual"></span></p>
+            <p>Description: <span id="desc-actual"></span></p>
+            <p>Humidity: <span id="humidity"></span>%</p>
+          </div>
+        </div>
+      </div>
+      <div class="section-card">
+        <div class="section-title">Weather Forecast</div>
+        <div class="section-content">
+          <div id="forecast">
+            <!-- Forecast will be inserted here by JS -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section id="spotlights">
+      <h2>Member Spotlights</h2>
+      <div class="spotlights-container">
+        <!-- Spotlights will be inserted here by JS -->
+      </div>
+    </section>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-contact">
+        <strong>Guayaquil Chamber of Commerce</strong><br>
+        Av. Francisco de Orellana 1234<br>
+        Guayaquil, Ecuador<br>
+        info@ccguayaquil.org<br>
+        (+593) 4 123 4567
+      </div>
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook"><img src="images/facebook-icon.png" alt="Facebook"></a>
+        <a href="#" aria-label="Twitter"><img src="images/twitter-icon.png" alt="Twitter"></a>
+        <a href="#" aria-label="LinkedIn"><img src="images/linkedin-icon.png" alt="LinkedIn"></a>
+      </div>
+      <div class="footer-info">
+        WDD231 Class Project<br>
+        Elías Cabeza de Vaca<br>
+        &copy; <span id="footer-year"></span> Guayaquil Chamber of Commerce<br>
+        Last modification: <span id="last-modified"></span>
+      </div>
+    </div>
+  </footer>
+  <script>
+    document.getElementById('footer-year').textContent = new Date().getFullYear();
+    document.getElementById('last-modified').textContent = document.lastModified;
+    
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const navList = document.querySelector('.nav-list');
+    
+    if (menuToggle && navList) {
+      menuToggle.addEventListener('click', () => {
+        navList.classList.toggle('open');
+      });
+    }
+  </script>
+  <script src="ja/weather.js"></script>
+</body>
+</html>
