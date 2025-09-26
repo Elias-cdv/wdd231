@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Guayaquil Chamber of Commerce - Join</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    /* I didn't creat an extra css archive, just to be more organizated */
+    .content-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      max-width: 1100px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    @media(min-width: 900px){
+      .content-grid { grid-template-columns: 1fr 360px; align-items:start; }
+    }
+    form label { display:block; margin-bottom:0.75rem; }
+    form input, form select, form textarea { width:100%; padding:0.5rem; margin-top:0.25rem; box-sizing:border-box; }
+    .membership-cards { display:grid; gap:1rem; }
+    .card {
+      border-radius:12px; padding:1rem; box-shadow:0 6px 18px rgba(0,0,0,0.08);
+      background:linear-gradient(180deg, rgba(255,255,255,0.9), rgba(250,250,250,0.9));
+      transform: translateY(20px); opacity:0;
+      animation: fadeInUp 600ms forwards;
+    }
+    .card:nth-child(1){ animation-delay: 0.15s; }
+    .card:nth-child(2){ animation-delay: 0.30s; }
+    .card:nth-child(3){ animation-delay: 0.45s; }
+    .card:nth-child(4){ animation-delay: 0.60s; }
+    @keyframes fadeInUp { to { transform: translateY(0); opacity:1; } }
+
+    dialog { border-radius:10px; padding:1rem 1.25rem; max-width:600px; width:90%; }
+    dialog::backdrop { background: rgba(0,0,0,0.45); }
+
+    .card a { display:inline-block; margin-top:0.5rem; text-decoration:underline; cursor:pointer; }
+    .dialog-close { margin-top:1rem; }
+  </style>
+</head>
+<body>
+  <header> <!-- mantén tu header original -->
+    <div class="header-container">
+      <img src="images/favicon.png" alt="Guayaquil Chamber of Commerce Logo" class="logo">
+      <h1>Guayaquil Chamber of Commerce</h1>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="directory.html">Directory</a></li>
+          <li><a href="join.html" class="active">Join</a></li>
+          <li><a href="discover.html">Discover</a></li>
+        </ul>
+        <button id="menu-toggle" aria-label="Open menu">&#9776;</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="content-grid">
+      <!-- FORM -->
+      <form method="get" action="thankyou.html" id="join-form" novalidate>
+        <label>
+          First name:
+          <input type="text" name="firstname" title="Enter your first name"
+                 required autocomplete="given-name" />
+        </label>
+
+        <label>
+          Last name:
+          <input type="text" name="lastname" title="Enter your last name"
+                 required autocomplete="family-name" />
+        </label>
+
+        <label>
+          Organization Title:
+          <input type="text" name="organization-title" title="Your role in the organization"
+                 autocomplete="organization-title"
+                 pattern="[A-Za-z\- ]{7,}" placeholder="e.g., Marketing Manager" />
+        </label>
+
+        <label>
+          Email:
+          <input type="email" name="email" title="Enter a valid email"
+                 required autocomplete="email" placeholder="example@email.com" />
+        </label>
+
+        <label>
+          Mobile Phone:
+          <input type="tel" name="phone" title="Enter your phone number"
+                 required autocomplete="tel" />
+        </label>
+
+        <label>
+          Business / Organization Name:
+          <input type="text" name="organization" title="Enter your business or organization"
+                 required autocomplete="organization" />
+        </label>
+
+        <label>
+          Membership Level:
+          <select name="membership" title="Select membership level" required>
+            <option value="">--Select a Level--</option>
+            <option value="np">NP Membership (Non-Profit)</option>
+            <option value="bronze">Bronze Membership</option>
+            <option value="silver">Silver Membership</option>
+            <option value="gold">Gold Membership</option>
+          </select>
+        </label>
+
+        <label>
+          Business/Organization Description:
+          <textarea name="description" title="Describe your business or organization" rows="4"></textarea>
+        </label>
+
+        <input type="hidden" name="timestamp" id="timestamp">
+
+        <button type="submit">Submit Application</button>
+      </form>
+
+      <!-- MEMBERSHIP CARDS (aside) -->
+      <aside class="membership-cards" aria-label="Membership levels">
+        <div class="card">
+          <h3>NP Membership</h3>
+          <p>No fee for registered non-profits.</p>
+          <a href="#" onclick="openModal('np-modal'); return false;">More info</a>
+        </div>
+
+        <div class="card">
+          <h3>Bronze Membership</h3>
+          <p>Entry level benefits: promo in directory, event discounts.</p>
+          <a href="#" onclick="openModal('bronze-modal'); return false;">More info</a>
+        </div>
+
+        <div class="card">
+          <h3>Silver Membership</h3>
+          <p>Includes Bronze + spotlight article, extra event perks.</p>
+          <a href="#" onclick="openModal('silver-modal'); return false;">More info</a>
+        </div>
+
+        <div class="card">
+          <h3>Gold Membership</h3>
+          <p>All benefits: homepage spotlight, premium training, VIP access.</p>
+          <a href="#" onclick="openModal('gold-modal'); return false;">More info</a>
+        </div>
+      </aside>
+    </div>
+
+    <!-- MODALS (dialog) -->
+    <dialog id="np-modal" role="dialog" aria-labelledby="np-title">
+      <h2 id="np-title">NP Membership Benefits</h2>
+      <ul>
+        <li>Free membership for qualifying non-profits</li>
+        <li>Listing in the directory</li>
+        <li>Access to basic networking events</li>
+      </ul>
+      <button class="dialog-close" onclick="closeModal('np-modal')">Close</button>
+    </dialog>
+
+    <dialog id="bronze-modal" role="dialog" aria-labelledby="bronze-title">
+      <h2 id="bronze-title">Bronze Membership Benefits</h2>
+      <ul>
+        <li>Directory listing with logo</li>
+        <li>Discounts for chamber events</li>
+        <li>One promotional post per quarter</li>
+      </ul>
+      <button class="dialog-close" onclick="closeModal('bronze-modal')">Close</button>
+    </dialog>
+
+    <dialog id="silver-modal" role="dialog" aria-labelledby="silver-title">
+      <h2 id="silver-title">Silver Membership Benefits</h2>
+      <ul>
+        <li>Everything in Bronze</li>
+        <li>Spotlight article on the website</li>
+        <li>Priority registration & training access</li>
+      </ul>
+      <button class="dialog-close" onclick="closeModal('silver-modal')">Close</button>
+    </dialog>
+
+    <dialog id="gold-modal" role="dialog" aria-labelledby="gold-title">
+      <h2 id="gold-title">Gold Membership Benefits</h2>
+      <ul>
+        <li>All Silver benefits</li>
+        <li>Homepage spotlight banner</li>
+        <li>Dedicated account manager & VIP invitations</li>
+      </ul>
+      <button class="dialog-close" onclick="closeModal('gold-modal')">Close</button>
+    </dialog>
+
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <!-- footer content (igual que el tuyo) -->
+      <div class="footer-contact">
+        <strong>Guayaquil Chamber of Commerce</strong><br>
+        Av. Francisco de Orellana 1234<br>
+        Guayaquil, Ecuador<br>
+        info@ccguayaquil.org<br>
+        (+593) 4 123 4567
+      </div>
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook"><img src="images/facebook_3536394.png" alt="Facebook"></a>
+        <a href="#" aria-label="Twitter"><img src="images/twitter_3256013.png" alt="Twitter"></a>
+        <a href="#" aria-label="LinkedIn"><img src="images/social_13670350.png" alt="LinkedIn"></a>
+      </div>
+      <div class="footer-info">
+        <p>WDD231 Class Project<br>
+        Elías Cabeza de Vaca<br>
+        &copy; <span id="footer-year"></span> Guayaquil Chamber of Commerce<br>
+        Last modification: <span id="last-modified"></span></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Timestamp for hidden field (ISO string)
+    const ts = new Date().toISOString();
+    const tsField = document.getElementById('timestamp');
+    if(tsField) tsField.value = ts;
+
+    // Modal helpers (fallback for browsers without <dialog>)
+    function openModal(id) {
+      const dlg = document.getElementById(id);
+      if (!dlg) return;
+      if (typeof dlg.showModal === 'function') {
+        dlg.showModal();
+        // foco en el botón close para accesibilidad
+        const closeBtn = dlg.querySelector('.dialog-close');
+        if (closeBtn) closeBtn.focus();
+      } else {
+        // fallback: simple alert with title + text
+        alert(dlg.querySelector('h2').textContent + "\n\n" + dlg.querySelector('ul').innerText);
+      }
+    }
+    function closeModal(id) {
+      const dlg = document.getElementById(id);
+      if (!dlg) return;
+      try { dlg.close(); } catch(e){ /* ignore */ }
+    }
+
+    // close dialogs with Escape
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') {
+        document.querySelectorAll('dialog[open]').forEach(d => d.close());
+      }
+    });
+
+    // click outside to close (for browsers where click lands on dialog)
+    document.querySelectorAll('dialog').forEach(d => {
+      d.addEventListener('click', e => {
+        if (e.target === d) d.close();
+      });
+    });
+
+    // populate footer year & last modified
+    document.getElementById('footer-year').textContent = new Date().getFullYear();
+    document.getElementById('last-modified').textContent = document.lastModified || '—';
+  </script>
+
+  <!-- corrige la ruta si tu archivo real está en js/ -->
+  <script src="js/members.js"></script>
+</body>
+</html>

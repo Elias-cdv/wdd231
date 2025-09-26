@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Thank you — Guayaquil Chamber</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    main { max-width:800px; margin:2rem auto; padding:0 1rem; }
+    .summary { background:#f7f7f7; padding:1rem; border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,0.03); }
+    .summary dt { font-weight:600; }
+  </style>
+</head>
+<body>
+  <header> <!-- usa tu header real o copia aquí --> </header>
+
+  <main>
+    <h1>Thank you for your application!</h1>
+    <p>We received your application. Below are the details you submitted:</p>
+
+    <dl class="summary" aria-live="polite">
+      <dt>First name</dt><dd id="out-firstname">—</dd>
+      <dt>Last name</dt><dd id="out-lastname">—</dd>
+      <dt>Email</dt><dd id="out-email">—</dd>
+      <dt>Phone</dt><dd id="out-phone">—</dd>
+      <dt>Business / Organization</dt><dd id="out-org">—</dd>
+      <dt>Timestamp</dt><dd id="out-ts">—</dd>
+    </dl>
+
+    <p><a href="index.html">Return to Home</a> | <a href="join.html">Submit another application</a></p>
+  </main>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    function show(id, key) {
+      const v = params.get(key) || '—';
+      document.getElementById(id).textContent = decodeURIComponent(v);
+    }
+    show('out-firstname', 'firstname');
+    show('out-lastname', 'lastname');
+    show('out-email', 'email');
+    show('out-phone', 'phone');
+    show('out-org', 'organization');
+    show('out-ts', 'timestamp');
+  </script>
+</body>
+</html>
