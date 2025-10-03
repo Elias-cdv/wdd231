@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guayaquil Chamber of Commerce</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="images/favicon.png">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+  <meta property="og:title" content="Guayaquil Chamber of Commerce">
+  <meta property="og:description" content="Directory of members of the Guayaquil Chamber of Commerce.">
+  <meta property="og:image" content="images/og-image.jpg">
+  <meta property="og:url" content="https://your-github-username.github.io/wdd231/chamber/discover.html">
+
+  <style>
+    /* --- Layout para que footer quede abajo --- */
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      margin: 0;
+      font-family: 'Nunito', sans-serif;
+    }
+
+    main {
+      flex: 1;
+      padding: 10px;
+    }
+
+    /* --- Grid cards --- */
+    .discover-cards {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: 1fr;
+    }
+
+    @media (min-width: 600px) {
+      .discover-cards {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 1025px) {
+      .discover-cards {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    /* --- Cards individuales --- */
+    .discover-cards .card {
+      background: #f8f8f8;
+      padding: 10px;
+      border-radius: 5px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .discover-cards img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      transition: transform 0.3s ease, filter 0.3s ease;
+      border-radius: 5px;
+    }
+
+    @media (min-width: 641px) {
+      .discover-cards img:hover {
+        transform: scale(1.05);
+        filter: brightness(0.9);
+      }
+    }
+
+    /* --- Mensaje de última visita --- */
+    .visit-message {
+      margin-top: 20px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    /* Footer */
+    footer {
+      background: #222;
+      color: #fff;
+      padding: 20px;
+    }
+
+    .footer-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .footer-container div {
+      margin: 5px 0;
+    }
+
+    .footer-container img {
+      width: 24px;
+      height: 24px;
+      vertical-align: middle;
+    }
+
+    nav .nav-list.open {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <img src="images/favicon.png" alt="Guayaquil Chamber of Commerce Logo" class="logo">
+      <h1>Guayaquil Chamber of Commerce</h1>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="directory.html">Directory</a></li>
+          <li><a href="join.html">Join</a></li>
+          <li><a href="discover.html">Discover</a></li>
+        </ul>
+        <button id="menu-toggle" aria-label="Open menu">&#9776;</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="discover-main">
+    <h2>Discover Guayaquil</h2>
+    <div class="discover-cards" id="discover-cards">
+      <!-- Cards cargadas por JS -->
+    </div>
+    <div id="visit-message" class="visit-message"></div>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-contact">
+        <strong>Guayaquil Chamber of Commerce</strong><br>
+        Av. Francisco de Orellana 1234<br>
+        Guayaquil, Ecuador<br>
+        info@ccguayaquil.org<br>
+        (+593) 4 123 4567
+      </div>
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook"><img src="images/facebook_3536394.png" alt="Facebook"></a>
+        <a href="#" aria-label="Twitter"><img src="images/twitter_3256013.png" alt="Twitter"></a>
+        <a href="#" aria-label="LinkedIn"><img src="images/social_13670350.png" alt="LinkedIn"></a>
+      </div>
+      <div class="footer-info">
+        WDD231 Class Project<br>
+        Elías Cabeza de Vaca<br>
+        &copy; <span id="footer-year"></span> Guayaquil Chamber of Commerce<br>
+        Last modification: <span id="last-modified"></span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Footer dinámico
+    document.getElementById('footer-year').textContent = new Date().getFullYear();
+    document.getElementById('last-modified').textContent = document.lastModified;
+
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const navList = document.querySelector('.nav-list');
+    if (menuToggle && navList) {
+      menuToggle.addEventListener('click', () => {
+        navList.classList.toggle('open');
+      });
+    }
+
+    // Cargar datos del JSON
+    fetch('data/discover.json')
+      .then(res => res.json())
+      .then(data => {
+        const container = document.getElementById('discover-cards');
+        data.forEach(place => {
+          const card = document.createElement('section');
+          card.className = 'card';
+          card.innerHTML = `
+            <h2>${place.title}</h2>
+            <figure>
+              <img src="${place.image}" alt="${place.title}">
+              <figcaption>${place.title}</figcaption>
+            </figure>
+            <address>${place.address}</address>
+            <p>${place.description}</p>
+            <button>Learn More</button>
+          `;
+          container.appendChild(card);
+        });
+      });
+
+    // LocalStorage: mensaje última visita
+    const lastVisit = localStorage.getItem('lastVisit');
+    const now = Date.now();
+    const messageEl = document.getElementById('visit-message');
+
+    if (!lastVisit) {
+      messageEl.textContent = "Welcome! Let us know if you have any questions.";
+    } else {
+      const days = Math.floor((now - parseInt(lastVisit)) / (1000 * 60 * 60 * 24));
+      if (days < 1) {
+        messageEl.textContent = "Back so soon! Awesome!";
+      } else {
+        messageEl.textContent = `You last visited ${days} ${days === 1 ? 'day' : 'days'} ago.`;
+      }
+    }
+    localStorage.setItem('lastVisit', now);
+  </script>
+
+  <script src="ja/weather.js"></script>
+</body>
+</html>

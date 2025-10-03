@@ -1,0 +1,50 @@
+[
+  {
+    "title": "Malecón 2000",
+    "image": "images/malecon200.webp",
+    "address": "Av. Simón Bolivar, Guayaquil",
+    "description": "A scenic boardwalk along the Guayas River featuring gardens, museums, and monuments."
+  },
+  {
+    "title": "Santa Ana Hill",
+    "image": "images/cerrosantaana.webp",
+    "address": "Diego Noboa Stairs, Guayaquil",
+    "description": "Historic hill with 444 steps, colorful houses, cafes, and a lighthouse at the top."
+  },
+  {
+    "title": "Las Peñas Neighborhood",
+    "image": "images/laspeñas.webp",
+    "address": "Numa Pompilio Llona Street, Guayaquil",
+    "description": "The city's oldest neighborhood, known for its colonial architecture and art galleries."
+  },
+  {
+    "title": "Guayaquil Historical Park",
+    "image": "images/parquehistorico.webp",
+    "address": "Km 1.5 Samborondón Road, Guayaquil",
+    "description": "A park that recreates the region’s history, architecture, and native wildlife."
+  },
+  {
+    "title": "Botanical Garden",
+    "image": "images/jardinbotanico.webp",
+    "address": "Cerro Colorado, Guayaquil",
+    "description": "Natural space with over 300 plant species and ecological trails."
+  },
+  {
+    "title": "Seminary Park",
+    "image": "images/parqueseminario.webp",
+    "address": "Chile Ave & 10 de Agosto Ave, Guayaquil",
+    "description": "Known as Iguana Park, located in front of the Metropolitan Cathedral."
+  },
+  {
+    "title": "Santa Ana Port",
+    "image": "images/puertosantaana.webp",
+    "address": "End of Numa Pompilio Llona Street, Guayaquil",
+    "description": "Modern area with restaurants, bars, and riverfront views."
+  },
+  {
+    "title": "Moorish Tower",
+    "image": "images/torremorisca.webp",
+    "address": "Malecón Simón Bolívar & 10 de Agosto Ave, Guayaquil",
+    "description": "Historic clock tower with Moorish architecture, a symbol of downtown Guayaquil."
+  }
+]
