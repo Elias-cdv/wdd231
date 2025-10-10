@@ -1,0 +1,134 @@
+.contact-main{
+    padding: 4rem 6rem;
+    text-align: left;
+}
+
+.contact-main h1{
+    font-family: var(--font-title);
+    font-size: 2.5rem;
+    color: var(--terracotta);
+    margin-bottom: 1rem;
+}
+
+.contact-main p{
+    font-family: var(--font-body);
+    font-size: 1.2rem;
+    color: var(--darkblue);
+    margin-bottom: 2rem;
+}
+
+.contact-image{
+    margin-left: 10rem;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.contact-form-section{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 600px;
+}
+.contact-form-section h2{
+    font-family: var(--font-title);
+    font-size: 2rem;
+    color: var(--emerald);
+    margin-bottom: 1rem;
+}
+.contact-form-section p{
+    font-family: var(--font-body);
+    font-size: 1.2rem;
+    color: var(--darkblue);
+    margin-bottom: 1rem;
+}
+.contact-form-section label{
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--darkblue);
+    margin-bottom: 0.5rem;
+}
+.contact-form-section input,
+.contact-form-section textarea{
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--darkblue);
+    border-radius: 5px;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--darkblue);
+}
+
+.contact-form-section button{
+    background-color: var(--terracotta);
+    color: var(--white);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-family: var(--font-title);
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form-section button:hover{
+        background-color: var(--emerald);
+}
+.contact-form-section button:focus{
+    outline: 2px solid var(--gold);
+    outline-offset: 2px;
+}
+
+.contact-details{
+    margin-top: 3rem;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--darkblue);
+}
+.contact-details h2{
+    font-family: var(--font-title);
+    font-size: 1.5rem;
+    color: var(--emerald);
+}
+.contact-details p{
+    margin: 0.5rem 0;
+    line-height: 1.6;
+    font-family: var(--font-body);
+    color: var(--darkblue)
+}
+
+
+/* ANIMATIONS */
+.contact-main,
+.contact-form-section {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeInUp 1s forwards;
+}
+
+.contact-form-section {
+    animation-delay: 0.5s;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .contact-main p,
+    .contact-form-section p,
+    .contact-form-section label,
+    .contact-form-section input,
+    .contact-form-section textarea,
+    .contact-details,
+    .contact-details p {
+        color: var(--white);
+    }
+}
+
+

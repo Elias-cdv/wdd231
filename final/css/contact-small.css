@@ -1,0 +1,132 @@
+.contact-main {
+    padding: 2rem 1.5rem;
+    text-align: center;
+}
+
+.contact-main h1 {
+    font-family: var(--font-title);
+    font-size: 1.8rem;
+    color: var(--terracotta);
+    margin-bottom: 0.75rem;
+}
+
+.contact-main p {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--darkblue);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+/* Imagen */
+.contact-image {
+    margin: 0 auto 1.5rem auto;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Formulario */
+.contact-form-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+}
+
+.contact-form-section h2 {
+    font-family: var(--font-title);
+    font-size: 1.5rem;
+    color: var(--emerald);
+    margin-bottom: 0.5rem;
+}
+
+.contact-form-section p {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    color: var(--darkblue);
+    margin-bottom: 0.75rem;
+}
+
+.contact-form-section label {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    color: var(--darkblue);
+    margin-bottom: 0.25rem;
+}
+
+.contact-form-section input,
+.contact-form-section textarea {
+    width: 100%;
+    padding: 0.65rem;
+    border: 1px solid var(--darkblue);
+    border-radius: 5px;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    color: var(--darkblue);
+}
+
+/* Botón */
+.contact-form-section button {
+    background-color: var(--terracotta);
+    color: var(--white);
+    border: none;
+    padding: 0.75rem;
+    font-family: var(--font-title);
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form-section button:hover {
+    background-color: var(--emerald);
+}
+
+.contact-form-section button:focus {
+    outline: 2px solid var(--gold);
+    outline-offset: 2px;
+}
+
+/* Detalles de contacto */
+.contact-details {
+    margin-top: 2rem;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    color: var(--darkblue);
+    text-align: center;
+}
+
+.contact-details h2 {
+    font-family: var(--font-title);
+    font-size: 1.3rem;
+    color: var(--emerald);
+}
+
+.contact-details p {
+    margin: 0.4rem 0;
+    line-height: 1.5;
+    font-family: var(--font-body);
+    color: var(--darkblue);
+}
+
+/* Animaciones */
+.contact-main,
+.contact-form-section {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s forwards;
+}
+
+.contact-form-section {
+    animation-delay: 0.3s;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

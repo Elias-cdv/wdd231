@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Andean roots - Ecuadorian handicrafts">
+    <meta name="author" content="Elías Cabeza de Vaca">
+    <title>Andean roots </title>
+    <meta name="keywords" content="Ecuador, handicrafts, Andean, souvenirs, traditional, artisan">
+    <!--links-->
+    <link rel="icon" href="images/logo_andeanroots.png">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/large.css">
+    <link rel="stylesheet" href="css/small.css">
+    <script src="js/main.js" defer></script> 
+    <script src="js/products.js " defer></script>
+    <script src="js/storage.js" defer></script>
+</head>
+<body>
+    <header>
+        <img src="images/logo_andeanroots.png" alt="Ecuadorian handicrafts Logo" id="SiteLogo">
+        <span>Andean roots</span>
+        <nav>
+            <ul id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button id="menu-toggle" aria-label="Open menu"></button>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <img src="images/heroimage.webp" alt="hero-image" class="hero-image">
+        <button class="keynote-btn">Buy now</button>
+    </section>
+
+    <main>
+        <!--SEE OUR PRODUCTS-->
+        <h1 class="home-section">See our products</h1>
+        <div class="products-container" id="products-container">
+            <!-- Just 3 products will be dynamically inserted here -->
+        </div>
+        <button class="view-all-btn" onclick="location.href='products.html'">View All Products</button>
+        <!--ABOUT US-->
+        <h1 class="home-section">About us</h1>
+        <div class="about-us">
+            <img src="images/about-us.webp" alt="About us image" class="about-image">
+            <div class="about-text">
+                <p>Welcome to Andean Roots, your gateway to the rich cultural heritage of Ecuador. We specialize in authentic Ecuadorian handicrafts, offering a diverse range of products that showcase the artistry and traditions of the Andean region. Our collection includes handmade textiles, pottery, jewelry, and more, all crafted by skilled artisans who pour their heart and soul into every piece.</p>
+                <p>At Andean Roots, we are committed to supporting local communities and preserving traditional craftsmanship. Each purchase you make helps sustain these artisans and their families, allowing them to continue their work and pass down their skills to future generations.</p>
+                <p>Explore our selection of unique and beautiful handicrafts, perfect for gifts or as a special treat for yourself. Experience the vibrant culture of Ecuador through our products and take home a piece of Andean heritage.</p>
+            </div>
+        </div>
+
+        <!--WHY TRUST IN US?-->
+        <h1 class="home-section">Why trust in us?</h1>
+        <h2 class="home-subtitle">Hear our clients</h2>
+        <div class="trust-container">
+            <div class="client-card">
+                <!--first client-->
+                <img src="images/client1.webp" alt="Client 1" class="client-photo1">
+                <p class="client-name1">Maria G.</p>
+                <p class="client-feedback1">"I absolutely love the handmade jewelry I purchased from Andean Roots. Each piece is unique and beautifully crafted. The quality is exceptional, and I feel good knowing that my purchase supports local artisans."</p>
+            </div>
+            <div class="client-card2">
+                <!--second client-->
+                <img src="images/client2.webp" alt="Client 2" class="client-photo2">
+                <p class="client-name2">John D.</p>
+                <p class="client-feedback2">"The textiles I bought are stunning! The colors and patterns are so vibrant and authentic. The customer service was excellent, and my order arrived quickly and in perfect condition. Highly recommend Andean Roots!"</p>
+            </div>
+            <div class="client-card3">
+                <!--third client-->
+                <img src="images/client3.webp" alt="Client 3" class="client-photo3">
+                <p class="client-name3">Sofia L.</p> 
+                <p class="client-feedback3">"Andean Roots has a fantastic selection of Ecuadorian handicrafts. I purchased a beautiful pottery set that has become a centerpiece in my home. The craftsmanship is top-notch, and I appreciate the story behind each piece."</p>
+            </div>
+        </div>
+    </main>
+    <!--FOOTER-->
+    <footer>
+        <p>&copy; 2024 Andean Roots. All rights reserved.</p>
+        <div class="social-media">
+            <a href="https://www.facebook.com/AndeanRoots" target="_blank">Facebook</a>
+            <a href="https://www.instagram.com/AndeanRoots" target="_blank">Instagram</a>
+            <a href="https://www.twitter.com/AndeanRoots" target="_blank">Twitter</a>
+        </div>
+    </footer>
+<script type = "module" src = "./js/main.js"></script>
+</body>
+</html>

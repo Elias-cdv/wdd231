@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ecuadorian handicrafts">
+    <meta name="author" content="Elías Cabeza de Vaca">
+    <title>Andean roots </title>
+    <meta name="keywords" content="Ecuador, handicrafts, Andean, souvenirs, traditional, artisan">
+    <!--links-->
+    <link rel="icon" href="images/favicon.png">
+    <!--STYLES IMPORTED-->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/large.css">
+    <link rel="stylesheet" href="css/small.css">
+    <!--STYLE FOR CONTACT.HTML-->
+    <link rel="stylesheet" href="css/contact-large.css">
+    <link rel="stylesheet" href="css/contact-small.css" media="(max-width: 768px)">
+    <script src="js/main.js" defer></script> 
+    <script src="js/products.js " defer></script>
+    <script src="js/storage.js" defer></script>
+</head>
+<!--BODY AND HEADER-->
+<body>
+    <header>
+        <img src="images/personal-logo.png" alt="Ecuadorian handicrafts Logo" id="SiteLogo">
+        <span>Andean roots</span>
+        <nav>
+            <ul id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button id="menu-toggle" aria-label="Open menu"></button>
+        </nav>
+    </header>
+    <!--MAIN-->
+    <main class="contact-main">
+        <!--CONTACT INFO-->
+        <h1>Contact Us</h1>
+        <p>
+            We'd love to hear from you! Whether you have a question about our handmade products, 
+            want to collaborate, or simply wish to share your experience, feel free to reach out. 
+            At <strong>Andean Roots</strong>, every message matters.
+        </p>
+        <img src="images/contact-us.webp" alt="Contact us image" class="contact-image">
+        <!--CONTACT FORM-->
+        <section class="contact-form-section">
+            <h2>Send us a message</h2>
+            <!-- Using Formspree for form handling -->
+            <p>Please fill out the form below and we will get back to you as soon as possible.</p>
+            <form id="contactForm" action="https://formspree.io/f/your-form-id" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="_replyto" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+        <!--CONTACT DETAILS-->
+        <section class="contact-details">
+            <h2>Our Contact Details</h2>
+            <div class="details">
+                <h3>Email</h3>
+                <p><a href="mailto:info@andeanroots.com">info@andeanroots.com</a></p>
+            </div>
+            <div class="details">
+                <h3>Phone</h3>
+                <p><a href="tel:+1234567890">+593 93 567 7890</a></p>
+            </div>
+            <div class="details">
+                <h3>Address</h3>
+                <p> Calle Panamá y Avenida 9 de Octubre, Guayaquil, Ecuador</p>
+            </div>
+        </section>
+    </main>      
+    <!--FOOTER-->
+    <footer>
+        <p>&copy; 2024 Andean Roots. All rights reserved.</p>
+        <div class="social-media">
+            <a href="https://www.facebook.com/AndeanRoots" target="_blank">Facebook</a>
+            <a href="https://www.instagram.com/AndeanRoots" target="_blank">Instagram</a>
+            <a href="https://www.twitter.com/AndeanRoots" target="_blank">Twitter</a>
+        </div>
+    </footer>
+</body>
+</html>
+

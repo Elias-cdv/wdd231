@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ecuadorian handicrafts">
+    <meta name="author" content="Elías Cabeza de Vaca">
+    <title>Andean roots </title>
+    <meta name="keywords" content="Ecuador, handicrafts, Andean, souvenirs, traditional, artisan">
+    <!--links-->
+    <link rel="icon" href="images/favicon.png">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/large.css">
+    <link rel="stylesheet" href="css/small.css">
+    <script src="js/main.js" defer></script> 
+    <script src="js/products.js " defer></script>
+    <script src="js/storage.js" defer></script>
+</head>
+<!--BODY AND HEADER-->
+<body>
+    <header>
+        <img src="images/personal-logo.png" alt="Ecuadorian handicrafts Logo" id="SiteLogo">
+        <span>Andean roots</span>
+        <nav>
+            <ul id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button id="menu-toggle" aria-label="Open menu"></button>
+        </nav>
+    </header>
+    <main>
+        <h1 class="products-title">Our Products</h1>
+        <div class="all-products-container" id="all-products-container">
+            <!-- All products will be dynamically inserted here -->
+        </div>
+        <section class="products-container" aria-live="polite"></section>
+    </main>
+    <!--FOOTER-->
+    <footer>
+        <p>&copy; 2024 Andean Roots. All rights reserved.</p>
+        <div class="social-media">
+            <a href="https://www.facebook.com/AndeanRoots" target="_blank">Facebook</a>
+            <a href="https://www.instagram.com/AndeanRoots" target="_blank">Instagram</a>
+            <a href="https://www.twitter.com/AndeanRoots" target="_blank">Twitter</a>
+        </div>
+    </footer>
+</body>
+<!--import module-->
+<script type="module">
+    import { initProductsPage} from './js/products.js';
+    initProductsPage(); // Initialize the products page
+</script>
+</html>

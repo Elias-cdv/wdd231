@@ -1,0 +1,107 @@
+[
+    {
+        "id": 1,
+        "name": "Red Ecuadorian Poncho",
+        "price": 270,
+        "image": "images/products/poncho.webp",
+        "description": "Handwoven red poncho made from alpaca wool, featuring traditional Ecuadorian patterns."
+    },
+    {
+        "id": 2, 
+        "name": "Ceramic plant pot",
+        "price": 45,
+        "image": "images/products/plant_pot.jpg",
+        "description": "Hand-painted ceramic plant pot with vibrant colors and intricate designs."
+    },
+    {
+        "id": 3, 
+        "name": "Ocarina",
+        "price": 60,
+        "image": "images/products/ocarina.webp",
+        "description": "Traditional Andean ocarina made from clay, perfect for music enthusiasts."
+    },
+    {
+        "id": 4, 
+        "name": "Woven bracelet",
+        "price": 25,
+        "image": "images/products/pulsera.jpg",
+        "description": "Colorful woven bracelet made from natural fibers, showcasing traditional patterns."
+    },
+    {
+        "id": 5,
+        "name": "Set of woven ties",
+        "price": 120,
+        "image": "images/products/ties.jpg",
+        "description": "Set of seven handwoven ties made from alpaca wool, featuring traditional Ecuadorian designs."
+    },
+    {
+        "id": 6, 
+        "name": "Ceramic mug",
+        "price": 30,
+        "image": "images/products/mug.jpg",
+        "description": "Handcrafted ceramic mug with traditional Ecuadorian motifs, perfect for your favorite beverage."
+    },
+    {
+        "id": 7, 
+        "name": "Woven bag",
+        "price": 80,
+        "image": "images/products/woven_bag.jpg",
+        "description": "Handwoven bag made from natural fibers, featuring vibrant colors and traditional patterns."
+    },
+    {
+        "id": 8, 
+        "name": "Alpaca wool scarf",
+        "price": 150,
+        "image": "images/products/woven_scarf.jpg",
+        "description": "Soft and warm scarf made from high-quality alpaca wool, perfect for chilly days."
+    },
+    {
+        "id": 9,
+        "name": "Quena",
+        "price": 75,
+        "image": "images/products/quena.jpg",
+        "description": "Traditional Andean flute made from bamboo, ideal for music lovers."
+    },
+    {
+        "id": 10,
+        "name": "Alpaca sweater",
+        "price": 200,
+        "image": "images/products/alpaca_sweater.jpg",
+        "description": "Cozy sweater made from soft alpaca wool, featuring traditional Ecuadorian designs."
+    },
+    {
+        "id": 11,
+        "name": "Tagua Nut Necklace",
+        "price": 55,
+        "image": "images/products/tagua_necklace.jpg",
+        "description": "Eco-friendly necklace made from polished tagua nuts, known as 'vegetable ivory', handcrafted by local artisans."
+    },
+    {
+        "id": 12,
+        "name": "Leather Coin Purse",
+        "price": 35,
+        "image": "images/products/coin_purse.jpg",
+        "description": "Hand-stitched leather coin purse with traditional Ecuadorian embossing, perfect for everyday use."
+    },
+    {
+        "id": 13,
+        "name": "Hand-painted Wooden Mask",
+        "price": 90,
+        "image": "images/products/wooden_mask.jpg",
+        "description": "Decorative wooden mask hand-painted with vibrant Andean motifs, ideal for wall display."
+    },
+    {
+        "id": 14,
+        "name": "Woolen Beanie",
+        "price": 40,
+        "image": "images/products/woolen_beanie.jpg",
+        "description": "Warm beanie knitted from alpaca wool, featuring colorful traditional patterns."
+    },
+    {
+        "id": 15,
+        "name": "Embroidered Table Runner",
+        "price": 100,
+        "image": "images/products/table_runner.jpg",
+        "description": "Hand-embroidered table runner with intricate floral and geometric designs, perfect for home decor."
+    }
+]
